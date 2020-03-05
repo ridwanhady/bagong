@@ -1,0 +1,26 @@
+{
+  "name": "bagong",
+  "version": "1.0.0",
+  "description": "Bagong is a simple link shortener that was built using NodeJS, Express and MongoDB. The name Bagong is inspired by one of Indonesia's original puppet figures who is famous for his simplicity.",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.3",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rid1hady/bagong.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rid1hady/bagong/issues"
+  },
+  "homepage": "https://github.com/rid1hady/bagong#readme"
+}
