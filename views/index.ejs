@@ -11,7 +11,7 @@
         <h1>Bagong: URL Shortener</h1>
         <form action="/shortUrls" method="POST" class="my-4 form-inline">
             <label for="fullUrl" class="sr-only">URL</label>
-            <input required type="url" placeholder="URL" name="fullUrl" id="fullUrl" class="form-control col mr-2"/>
+            <input required type="url" placeholder="URL" name="fullUrl" id="fullUrl" class="form-control col mr-2"  onblur="checkURL(this)"/>
             <button type="submit" class="btn btn-success">Shorten</button>
         </form>
 
@@ -24,13 +24,25 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><a href="https://google.com">https://google.com</a></td>
-                    <td><a href="/qwerty">qwerty</a></td>
-                    <td>1000</td>
-                </tr>
+                <% shortUrls.forEach(shortUrl => { %>
+                    <tr>
+                      <td><a href="<%= shortUrl.fullUrl %>"><%= shortUrl.fullUrl %></a></td>
+                      <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                      <td><%= shortUrl.clicks %></td>
+                    </tr>
+                  <% }) %>
             </tbody>
         </table>
     </div>
 </body>
+<script>
+    function checkURL(url) {
+        var newUrl = url.value;
+        if (!~newUrl.indexOf("http")) {
+            newUrl = "http://" + newUrl;
+        }
+        url.value = newUrl;
+        return url;
+    }
+</script>
 </html>
