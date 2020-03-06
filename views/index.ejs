@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bagong: URL Shortener</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Bagong: URL Shortener</h1>
-    <form action="" method="POST">
-        <label for="fullUrl">URL</label>
-        <input type="url" name="fullUrl" id="fullUrl"/>
-        <button type="submit">Shorten</button>
-    </form>
+    <div class="container">
+        <h1>Bagong: URL Shortener</h1>
+        <form action="" method="POST" class="my-4 form-inline">
+            <label for="fullUrl" class="sr-only">URL</label>
+            <input type="url" placeholder="URL" name="fullUrl" id="fullUrl" class="form-control col mr-4"/>
+            <button type="submit" class="btn btn-success">Shorten</button>
+        </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Full URL</th>
-                <th>Short URL</th>
-                <th>Clicks</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="https://google.com">https://google.com</a></td>
-                <td><a href="/qwerty">qwerty</a></td>
-                <td>1000</td>
-            </tr>
-        </tbody>
-    </table>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Full URL</th>
+                    <th scope="col">Short URL</th>
+                    <th scope="col">Clicks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://google.com">https://google.com</a></td>
+                    <td><a href="/qwerty">qwerty</a></td>
+                    <td>1000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
